@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# REAL TIME COLLABORATIVE DOCUMENT EDITOR
+*COMPANY*: CODTECH IT SOLUTIONS
+*NAME*: SAINATH DIGAMBAR WAKHURE
+*INTERN ID*: CT12WSAF
+*DOMAIN*: FULL STACK WEB DEVELOPMENT
+*DURATION*: 12 WEEKS 
+*MENTOR*: NEELA SANTOSH KUMAR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Real-Time Collaborative Document Editing Application.
+It allows multiple users to edit the same document together, and see each other's changes immediately, just like in Google Docs!
 
-## Available Scripts
+- How It Works
+The application has two major parts:
 
-In the project directory, you can run:
+Frontend: Built using React.js.
 
-### `npm start`
+Backend: Built using NestJS (a Node.js framework) + WebSockets.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Both parts work together to let users:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a new document.
 
-### `npm test`
+Edit the document in real-time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Share and collaborate with other users.
 
-### `npm run build`
+Save changes instantly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Whenever a user types something in the editor, that change is sent to the server.
+The server then broadcasts the change to all other connected users.
+This way, everyone’s screen updates in real-time without reloading the page!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Structure of the Project
+Frontend (React App):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Has pages for Login, Register, View Document, and the Editor.
 
-### `npm run eject`
+Uses Tailwind CSS for beautiful and responsive styling.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Components like Editor.js, Login.js, Register.js, ViewDocument.js, and Header.js make the UI.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Communicates with the backend server using WebSocket and HTTP requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend (NestJS Server):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Handles users, documents, and real-time updates.
 
-## Learn More
+Uses WebSocket gateways to listen to document changes and send updates to everyone.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Uses JWT (JSON Web Tokens) for secure user login and authentication.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Has folders like auth/, document/, user/, socket/ which organize the code clearly.
 
-### Code Splitting
+Saves documents and user data securely.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Main Features
+Real-Time Collaboration: Multiple users can edit the same document at the same time.
 
-### Analyzing the Bundle Size
+Authentication: Secure login and registration for users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Document Management: Create, edit, and view documents.
 
-### Making a Progressive Web App
+Live Updates: Changes appear instantly for all users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Responsive Design: Works perfectly on mobile, tablet, and desktop.
 
-### Advanced Configuration
+Error Handling: Shows user-friendly error messages if something goes wrong.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Technologies Used
+Frontend:
 
-### Deployment
+React.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Tailwind CSS
 
-### `npm run build` fails to minify
+WebSocket client
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Axios (for API calls)
+
+Backend:
+
+NestJS (Node.js Framework)
+
+WebSocket Gateway
+
+JWT Authentication
+
+TypeScript
+
+Other Tools:
+
+ESLint and Prettier for code quality.
+
+.env file for storing environment variables securely.
+
+What Happens Step-by-Step
+A user opens the website and registers/logs in.
+
+They can create or open a document.
+
+The document opens inside a text editor (Editor.js).
+
+As the user types, each keystroke is sent to the backend server instantly.
+
+The server broadcasts the changes to all other users working on the same document.
+
+Everyone sees the edits happening live, just like Google Docs.
+
+If a user disconnects and reconnects, they can continue editing the document without losing their changes.
+
+Summary
+This Realtime Collaborative Document Editor is an amazing project for learning:
+
+How to build real-time applications.
+
+How to use WebSockets for live collaboration.
+
+How to build a full-stack application using React and NestJS.
+
+How to handle authentication securely.
+
+How to structure and organize a medium-to-large project cleanly.
+
+This project shows exactly how companies like Google, Microsoft, and Notion build their document collaboration tools!
+
+#Output
+
