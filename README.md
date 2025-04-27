@@ -124,4 +124,4 @@ How to structure and organize a medium-to-large project cleanly.
 This project shows exactly how companies like Google, Microsoft, and Notion build their document collaboration tools!
 
 #Output
-
+![Image](https://github.com/user-attachments/assets/d9a52224-00f2-4f5a-ae7b-b0383270e32f)
